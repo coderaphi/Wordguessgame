@@ -7,7 +7,7 @@
 
     var guesses = '';
     var alreadyGuessed = '';
-
+    var wins= 0;
     var guessesLeft =  5;
     var alreadyGuessedLetters= [];
 
@@ -67,6 +67,9 @@
        
         if (matchedCount === randomcar.length) {
             alert ("YOU WIN");
+            wins++;
+            winner= document.getElementById ('winner')
+            return initialize()
             
         }
 
@@ -81,6 +84,7 @@
         document.getElementById('word').innerHTML = arr.join(' ');               
         guesses.textContent = "" + guessesLeft;
         alreadyGuessed.textContent = " " + alreadyGuessedLetters.join(' ');
+        winner.textContent = "" + wins;
         
 
     };

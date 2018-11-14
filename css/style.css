@@ -51,7 +51,6 @@
     color: aliceblue;
     position: absolute;
     right:0;
-    
     text-align: center;
     line-height: 150px;
 
@@ -66,7 +65,7 @@
     text-align: center;
     position: absolute;
     margin-right:20px;
-    margin-top: 77px;
+    margin-top: 67px;
 
  }
 
@@ -83,6 +82,7 @@
     text-align: center;
     color: white;
     line-height: 60px;
+    overflow:hidden;
     
     
     
@@ -100,7 +100,7 @@
     right:0;
     text-align: center;
     margin-right:20px;
-    margin-bottom: 320px;
+    margin-bottom: 340px;
     
     
   
@@ -125,3 +125,41 @@
    
     
  }
+
+
+ #winner {
+
+    background-color:rgb(226, 22, 15);
+    position: absolute;
+    width: 200px;
+    height: 160px;
+    bottom:0;
+    right:0;
+    text-align: center;
+    line-height: 140px;
+    font-size: 72px;
+    color:white;
+    /* margin-bottom: 320px; */
+
+
+
+   
+
+
+ }
+
+
+    #wincount{
+      background-color: rgb(251, 255, 0);
+      position: absolute;
+      width: 200px;
+      height: 180px;
+      bottom:0;
+      right:0;
+      text-align: center;
+      margin-right:20px;
+      margin-bottom: 120px;
+     
+
+
+}
