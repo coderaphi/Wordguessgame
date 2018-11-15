@@ -1,16 +1,11 @@
 
-
-
-
-
- 
-
     var guesses = '';
     var alreadyGuessed = '';
     var wins= 0;
     var guessesLeft =  5;
     var alreadyGuessedLetters= [];
-
+    var winSound = new Audio ();
+        winSound.src="assets/Sounds/enginestart.wav"; 
     
 
    
@@ -20,8 +15,17 @@
 
     function initialize() {
 
+        
+
+
+        guesses = '';
+        alreadyGuessed = '';
+        guessesLeft =  5;
+
         guesses = document.getElementById ('guessesLeft');
+        guesses.innerHTML = 5
         alreadyGuessed = document.getElementById ('guessedLetters');
+        alreadyGuessed.innerHTML = ""
         
 
         // use random function to select car
@@ -40,6 +44,8 @@
 
     }
     // populate 
+
+
     document.onkeyup = function (wordGuess) {
         var userGuess = String.fromCharCode(wordGuess.keyCode).toLowerCase();
         var word = document.getElementById('word').innerHTML;
@@ -69,12 +75,16 @@
             alert ("YOU WIN");
             wins++;
             winner= document.getElementById ('winner')
-            return initialize()
+            winSound.play()
+            initialize()
+             
+             return
             
         }
 
         else if (guessesLeft<1) {
             alert (" YOU LOSE");
+            initialize()
             return;
         }
         if (!correctGuess) {
@@ -90,4 +100,3 @@
     };
 
 
-    
